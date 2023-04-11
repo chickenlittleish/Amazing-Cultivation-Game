@@ -67,3 +67,4 @@ os.system('clear')
 
 #ADD CHOICE TO RAISE HAND
 #ASK HIM IF OKAY TO USE THE TRAITS FROM THREE KINGDOMS WEBSITE
+#https://totalwar.fandom.com/wiki/Traits_(Total_War:_Three_Kingdoms)

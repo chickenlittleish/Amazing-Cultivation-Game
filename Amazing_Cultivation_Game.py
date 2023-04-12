@@ -57,8 +57,9 @@ if __name__ == "__main__":
         time.sleep(13)
         print("When the men finished cutting them down, they placed their swords back in their scabbards and walked back onto the stage as men entered from the sides and started removing the corpses.")
         time.sleep(13)
-        print("'Great, now that we've gotten rid of the waste, your instructor and teacher shall give you a few words. But before I leave, remember, those who aren't dedicated to the cause aren't needed.'")
+        print("'Great, now that we've gotten rid of the waste, your instructor shall give you a few words before dismissing you. But before I leave, remember, those who aren't dedicated to the cause aren't needed.'")
         time.sleep(13)
+        
 
 
 
@@ -66,5 +67,6 @@ os.system('clear')
 
 
 #ADD CHOICE TO RAISE HAND
-#ASK HIM IF OKAY TO USE THE TRAITS FROM THREE KINGDOMS WEBSITE
+#ASK HIM IF OKAY TO USE THE TRAITS FROM THREE KINGDOMS WEBSITE YES
 #https://totalwar.fandom.com/wiki/Traits_(Total_War:_Three_Kingdoms)
+#you can use it

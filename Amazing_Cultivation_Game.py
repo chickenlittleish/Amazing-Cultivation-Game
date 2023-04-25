@@ -58,10 +58,10 @@ if __name__ == "__main__":
         print("When the men finished cutting them down, they placed their swords back in their scabbards and walked back onto the stage as men entered from the sides and started removing the corpses.")
         time.sleep(13)
         print("'Great, now that we've gotten rid of the waste, your instructor shall give you a few words before dismissing you. But before I leave, remember, those who aren't dedicated to the cause aren't needed.'")
-        time.sleep(13)
-        
 
 
+
+trait1       trait2       trait3(when printing it put spaces)
 
 os.system('clear')
 

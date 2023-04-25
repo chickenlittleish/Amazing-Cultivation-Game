@@ -29,8 +29,25 @@ class MainCharacter():
 
 if __name__ == "__main__":
     while True:
-        print("As you awake in a strange stone room, you stand up slowly as you try to think about where you are.")
-        time.sleep(5)
+        MC = MainCharacter()
+        print("As you awake in a strange stone room, you stand up slowly as you try to think about where you are when you're hit with a strong headache as memories flood into your head.")
+        time.sleep(9)
+        print("[Choose from the options below]")
+        print("  富      重生      高貴      孤      悔")
+        print("Wealth  Rebirth  Nobility   Alone   Regret")
+        identification = input()
+        if identification in ["Wealth","wealth","富"]:
+            print("You are Hàoyú Fu, heir to the Thousand Treasures Commerce House, the biggest trading company in the whole company. Ever since he was young, he's lived a life unlike any, surrounded by luxury with his every desire met at the ring of a bell but one day when he was walking out in town with his guards, some strange men attacked them. They killed his guards and grabbed him running aeay before reinforcements could arrive to save the young master.")
+            time.sleep(20)
+            MC.name == "Hàoyú Fu"
+        if identification in ["Rebirth","rebirth","重生"]:
+            print("EPI")
+        if identification in ["Nobility","nobility","高貴"]:
+            print("EPI")
+        if identification in ["Alone","alone","孤"]:
+            print("EPI")
+        if identification in ["Regret","regret","悔"]:
+            print("FPP")
         print("As you try to absorb your surroundings, you hear a loud sound as a wall infront of you opens up shining a bright light into your dark room.")
         time.sleep(7)
         print("A man covering his face wtih a hood walks in and drags you by the hand out of the room.")
@@ -49,21 +66,45 @@ if __name__ == "__main__":
         time.sleep(7)
         print("As you questioned whether to raise your hand, you saw a hand raise up, and then another, and another, and soon, there where more than 50 hands raised among the sea of children there.")
         time.sleep(13)
-        print("'Those who've raised their hands please stand in front of the stage.'")
-        time.sleep(3)
-        print("'Ok great.' The man said as he snapped his fingers")
-        time.sleep(2)
-        print("Immediately the men behind him walked off the stage and towards the children as they pulled their swords and started mercilessly cutting them down as all the other children watched in horror.")
-        time.sleep(13)
-        print("When the men finished cutting them down, they placed their swords back in their scabbards and walked back onto the stage as men entered from the sides and started removing the corpses.")
-        time.sleep(13)
-        print("'Great, now that we've gotten rid of the waste, your instructor shall give you a few words before dismissing you. But before I leave, remember, those who aren't dedicated to the cause aren't needed.'")
+        print("[Do you raise your hand?]")
+        hand_raising_choice = input()
+        if hand_raising_choice[0] == "y":
+            print("'Those who've raised their hands please stand in front of the stage.'") 
+            time.sleep(3)
+            print("'Ok great.' The man said as he snapped his fingers")
+            time.sleep(2)
+            print("Immediately the men behind him walked off the stage and towards all of us as they pulled their swords.")
+            time.sleep(6)
+            print("One second you're looking straight and the next everything seems upside down as you realize you've been decapitated. All the children who raised their hands were killed.")
+            time.sleep(11)
+            print("When the men finished cutting you all down, they placed their swords back in their scabbards and walked back onto the stage as men entered from the sides and started removing the corpses.")
+            time.sleep(13)
+            print("'That's what happens to those who aren't dedicated to the cause, you trash.'")
+            print(".")
+            time.sleep(1)
+            print(".")
+            time.sleep(1)
+            print(".")
+            time.sleep(1)
+            print("Dead.")
+        if hand_raising_choice[0] == "n":
+            print("'Those who've raised their hands please stand in front of the stage.'") 
+            time.sleep(3)
+            print("'Ok great.' The man said as he snapped his fingers")
+            time.sleep(2)
+            print("Immediately the men behind him walked off the stage and towards the children who raised their hands as they pulled their swords and began mercillesly slaughtering the children.")
+            time.sleep(12)
+            print("When the men finished cutting all of them down, they placed their swords back in their scabbards and walked back onto the stage as men entered from the sides and started removing the corpses.")
+            time.sleep(13)
+            print("'Great, now that we've gotten rid of the waste, your instructor shall give you a few words before dismissing you. But before I leave, remember, those who aren't dedicated to the cause aren't needed.'")
+            time.sleep(14)
+            print("Now that we've gotten done with the entrance ceremony, you all shall be taken to the grand archive to pick out your martial arts that you shall train as long as you are here")
 
 
 
-trait1       trait2       trait3(when printing it put spaces)
+#trait1       trait2       trait3(when printing it put spaces)
 
-os.system('clear')
+#os.system('clear')
 
 
 #ADD CHOICE TO RAISE HAND

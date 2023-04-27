@@ -4,7 +4,7 @@ import os
 
 class MainCharacter():
     def __init__(self):
-        self.name = name
+        self.name = None
         self.main_weapon = None
         self.secondary_weapon = None
         self.hidden_weapon = None
@@ -25,8 +25,15 @@ class MainCharacter():
         self.weapons = []
         self.tools = []
         self.titles = []
-
-
+    def stats(self):
+        print("Name: " + MC.name)
+        print("Health: " + MC.health)
+        print("Qi: " + MC.qi)
+        print("Strength:" + MC.strength)
+        print("Stealth: " + MC.stealth)
+        print("Dexterity: " + MC.dexterity)
+        print("Endurance:" + MC.endurance)
+        print("Intelligence: " + MC.intelligence)
 if __name__ == "__main__":
     while True:
         MC = MainCharacter()
@@ -37,17 +44,33 @@ if __name__ == "__main__":
         print("Wealth  Rebirth  Nobility   Alone   Regret")
         identification = input()
         if identification in ["Wealth","wealth","富"]:
-            print("You are Hàoyú Fu, heir to the Thousand Treasures Commerce House, the biggest trading company in the whole company. Ever since he was young, he's lived a life unlike any, surrounded by luxury with his every desire met at the ring of a bell but one day when he was walking out in town with his guards, some strange men attacked them. They killed his guards and grabbed him running aeay before reinforcements could arrive to save the young master.")
-            time.sleep(20)
-            MC.name == "Hàoyú Fu"
+            print("You are Hàoyú Fu, heir to the Thousand Treasures Commerce House, the biggest trading company in the whole company. Ever since he was young, he's lived a life unlike any, surrounded by luxury with his every desire met at the ring of a bell but one day when he was walking out in town with his guards, some strange men attacked them. They killed his guards and grabbed him running away before reinforcements could arrive to save the young master.")
+            time.sleep(25)
+            MC.name = "Hàoyú Fu"
+            MC.health = 100
+            MC.qi = 50
+            MC.strength = 6
+            MC.stealth = 1
+            MC.dexterity = 8
+            MC.endurance = 4
+            MC.intelligence = 18
+            print("Your stats are:")
+            MC.stats()
         if identification in ["Rebirth","rebirth","重生"]:
-            print("EPI")
+            print("You are Master Oogway, a master martial artist who managed to become one of the 'Ten Seats of Heaven' signifying thatyou managed to reach the top of the world. But you never were satisfied, you had plenty of regrets from your youth and even though you were on your death bed, you still felt like you weren't done, you still hadn't fully mastered your martial arts or became the strongest. What a sad ending.")
+            time.sleep(20)
+            print("But as you close your eyes and take your final breath, you feel as if someone has grabbed your soul and removed it from your body. As you open your eyes you see your soul being dragged by a strange giant white hand but as you're flying with this hand, you suddenly pass out when it coems to a sudden halt.")
+            time.sleep(18)
+            MC.name == "Chao Gang"
         if identification in ["Nobility","nobility","高貴"]:
-            print("EPI")
+            print("")
         if identification in ["Alone","alone","孤"]:
             print("EPI")
         if identification in ["Regret","regret","悔"]:
-            print("FPP")
+            print("c")
+        else:
+            print("please choose one of the choices above")
+            identification = input()
         print("As you try to absorb your surroundings, you hear a loud sound as a wall infront of you opens up shining a bright light into your dark room.")
         time.sleep(7)
         print("A man covering his face wtih a hood walks in and drags you by the hand out of the room.")
@@ -102,7 +125,6 @@ if __name__ == "__main__":
 
 
 
-#trait1       trait2       trait3(when printing it put spaces)
 
 #os.system('clear')
 

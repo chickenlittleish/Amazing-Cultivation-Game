@@ -26,14 +26,14 @@ class MainCharacter():
         self.tools = []
         self.titles = []
     def stats(self):
-        print("Name: " + MC.name)
-        print("Health: " + MC.health)
-        print("Qi: " + MC.qi)
-        print("Strength:" + MC.strength)
-        print("Stealth: " + MC.stealth)
-        print("Dexterity: " + MC.dexterity)
-        print("Endurance:" + MC.endurance)
-        print("Intelligence: " + MC.intelligence)
+        print("Name: " + self.name)
+        print("Health: " + self.health)
+        print("Qi: " + self.qi)
+        print("Strength:" + self.strength)
+        print("Stealth: " + self.stealth)
+        print("Dexterity: " + self.dexterity)
+        print("Endurance:" + self.endurance)
+        print("Intelligence: " + self.intelligence)
 if __name__ == "__main__":
     while True:
         MC = MainCharacter()

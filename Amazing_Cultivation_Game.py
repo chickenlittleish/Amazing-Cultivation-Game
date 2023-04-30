@@ -1,6 +1,7 @@
 import sys 
 import time
 import os
+import random
 
 class MainCharacter():
     def __init__(self):
@@ -18,6 +19,8 @@ class MainCharacter():
         self.skills = []
         self.martial_arts = []
         self.weapons = []
+        self.wins = None
+        self.loses = None
     
     def stats(self):
         print("Name: ", (Main.name))
@@ -42,6 +45,17 @@ class MainCharacter():
         print("Skills: ", (Main.skills))
         print("Martial Arts: ", (Main.martial_arts))
         print("Weapons: ", (Main.weapons))
+
+    def stats3(self):
+        print("Name: ", (Main.name))
+        print("Health: ", (Main.health))
+        print("Qi: ", (Main.qi))
+        print("Strength:", (Main.strength))
+        print("Stealth: ", (Main.stealth))
+        print("Dexterity: ", (Main.dexterity))
+        print("Endurance:", (Main.endurance))
+        print("Intelligence: ", (Main.intelligence))
+        print("Main Weapon: ", (Main.main_weapon))
 
     def Death(self):
         print("You Died")
@@ -78,6 +92,34 @@ class MainCharacter():
         print("Loser")
         print("Lol")
         print("Get Gud")
+
+class Enemy():
+    def __init__(self):
+        self.name = random.choice(names)
+        self.main_weapon = random.choice(weapons_list)
+        self.alive = True
+        self.health = random.randint(100,500)
+        self.qi = random.randint(0,600)
+        self.strength = random.randint(1,20)
+        self.stealth = random.randint(1,20)
+        self.dexterity = random.randint(1,20)
+        self.endurance = random.randint(1,20)
+        self.intelligence = random.randint(1,20)
+        names = ["Fan Xiaobo","Zeng Liqiu","Qin Tung-Mei","He Liang","Chen Yanmei","Tian Nianzu","Dai Tao","Xu Meng","Liang Guoliang","Sun Zhilan","Ma Huifang","Zeng Chen","Zhu Meihui","Duan Yanmei","Gong Guangli","Luó Jiaying","Meng Xiaosheng","Zhong Qiuyue","Xiong Jia","Hao Xiuying"]
+        weapons_list = ["standard practice sword","standard practice bow","standard practice axe","standard practice spear","standard practice gauntlets","standard practice staff"] 
+        self.wins = None
+        self.loses = None
+
+    def Enemy_stats(self):
+        print("Name: ", (Enemies.name))
+        print("Health: ", (Enemies.health))
+        print("Qi: ", (Enemies.qi))
+        print("Strength:", (Enemies.strength))
+        print("Stealth: ", (Enemies.stealth))
+        print("Dexterity: ", (Enemies.dexterity))
+        print("Endurance: ", (Enemies.endurance))
+        print("Intelligence: ", (Enemies.intelligence))
+        print("Main Weapon: ", (Enemies.main_weapon))
 
 def identification(identification_choices):
     if identification_choices in ["Wealth","wealth","富"]:
@@ -161,13 +203,25 @@ def identification(identification_choices):
             Main.stats()
 
 def Battle():
-    #FINISH
-    d
+    print("'Welcome all to your first test since arrival. Now that you've all had time to choose your martial arts and to get yourself acquinted with your room, it's time to anounce your first test'")
+    time.sleep(12)
+    print("'Your first test shall be a dueling competition between you all as you may have noticed that there are stil too many of you guys. We don't need all of you guys, we only need the very best of you so to cut down your numbers in half, you all shall fight to the death with the winner being allowed to remain.'")
+    time.sleep(20)
+    print("'The first two contestants are " +Main.name+ " and " +Enemies+ ", please come up to the stage'")
+    time.sleep(5)
+    print("As you get to the stage, you see your opponent")
+    os.system('clear')
+    print("Your Stats:")
+    Main.stats3()
+    print("Enemy Stats:")
+    Enemies.Enemy_stats()
+    
+
 
 def Battle_Initiation():
     print("You went to the door and opened it and to your surprise, an instructor was there. He told you to follow him")
     time.sleep(6)
-    print("He led you through the whole facility to a giant arena")
+    print("He led you through the whole facility to a giant arena where you see the facility leader standing on the stage")
     Battle()
 
 def Action_Sleep():
@@ -180,8 +234,23 @@ def Action_Sleep():
 def Action_Relax():      
     print("You decided to relax and enjoy your time.")
     time.sleep(3)
-    print("But as you are relaxing, you hear a knock at your door.")
-    time.sleep(4)
+    print("You decide to dance to relax")
+    time.sleep(2)
+    print("What dance do you want to do")
+    dance_choice = input()
+    print("How many hours do you want to dance for?")
+    dance_time = input()
+    dance_time = int(dance_time)
+    time.sleep(2)
+    dance_counter = 1
+    for dance_counter in range(dance_counter, dance_time + 1):
+        dance_counter = str(dance_counter)
+        print("You danced the " +dance_choice+ "for " +dance_counter+ " hour(s)")
+        dance_counter = int(dance_counter)
+        time.sleep(1)
+    dance_time = str(dance_time)
+    print("After you danced for " +dance_counter+ " hour(s) and relaxed, you hear a knock at your door.")
+    time.sleep(7)
     Battle_Initiation()
     
 def Training(training_action):
@@ -412,6 +481,7 @@ def Grand_Archive():
 if __name__ == "__main__":
     while True:
         Main = MainCharacter()
+        Enemies = Enemy()
         print("As you awake in a strange stone room, you stand up slowly as you try to think about where you are when you're hit with a strong headache as memories flood into your head.")
         time.sleep(9)
         print("[Choose from the options below]")
@@ -429,8 +499,8 @@ if __name__ == "__main__":
         time.sleep(18)
         print("The man clears his through and suddenly yells out loud for the children to be quiet, the room filled with whispers and chatter quickly became silent.")
         time.sleep(7)
-        print("'Ahem. You all must be confused as to why you've been brought here. The reason is that you've all been chosen to become the key forces of the cult and assist the cult as spies and assassins to further are goal.'")
-        time.sleep(15)
+        print("'Ahem. You all must be confused as to why you've been brought here. I am the head of this facility and known as the ghost demon, one of the twelve demon generals of the cult. The reason is that you've all been chosen to become the key forces of the cult and assist the cult as spies and assassins to further are goal.'")
+        time.sleep(20)
         print("'Even though there may be many of you, I'll tell you right now, most of you will die. Only those who evolve and become true apex predators among all of you, those who become the best of the best will survive. The rest shall just become a stepping stone for the others rise.'")
         time.sleep(17)
         print("'But before your instructor comes up to talk to you all, I will ask only once, are there any among you who wish to leave before we start'")

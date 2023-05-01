@@ -65,35 +65,35 @@ class MainCharacter():
     def Death(self):
         print("You Died.")
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+       #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+       #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+       #time.sleep(1)
         print("Loser")
         print("Lol")
         print("Get Gud")
@@ -120,35 +120,25 @@ class Enemy():
         if self.main_weapon == "standard practice sword":
             martial_arts_list = ["Death Touch Art","Slashing Sword Art","Universal Severance Technique"]
             breathing_arts_list = ["River of Swords Breathing Technique","10,000 Sword Breathing Technique","One Mind Sword Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice bow":
             martial_arts_list = ["Heavenly Target Technique","Wind Guidance Art","Piercing Arrow Art"]
             breathing_arts_list = ["Unending Arrow Breathing Technique","Immortal Hunters Breathing Technique","All Seeing Arrow Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice axe":
             martial_arts_list = ["World Splitting Axe Art","Cleaving Axe Art","Demonic Cleaving Axe Technique"]
             breathing_arts_list = ["Living Forests Breath Breathing Technique","Wooden Cycle Breathing Technique","Howls of the Dying World Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice spear":
             martial_arts_list = ["Stabbing Spear Art","Piercing Dragons Flow Art","Sky Penetrating Art"]
-            breathing_arts_list = ["Undying Soldiers Breathing Technique",")Point of Origin Breathing Technique","Vital Rush Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
+            breathing_arts_list = ["Undying Soldiers Breathing Technique","Point of Piercing Breathing Technique","Vital Rush Breathing Technique"]
         if self.main_weapon == "fist":
             martial_arts_list = ["Drunken Buddha's Fist Art","Asuras Bloody Claw Art","Punching Fist Art"]
             breathing_arts_list = ["Unmoving Reaction Breathing Technique","Untempted Soul Breathing Technique","Focused Mind Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "staff":
             martial_arts_list = ["Swinging Staff Art","Dharma Wheel Turning Staff Art","Monkey Gods Divine Staff Art"]
-            breathing_arts_list = ["Natural Monkey's Breathing Technique","Influx Breathing Technique","Divine Cycle Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
+            breathing_arts_list = ["Natural Monkey's Breathing Technique","Vortex Breathing Technique","Divine Cycle Breathing Technique"]
+        self.martial_arts = random.choice(martial_arts_list)
+        self.breathing_arts = random.choice(breathing_arts_list)
 
-    def Enemy_stats(Enemies):
+    def Enemy_stats():
         print("Name: ", (Enemies.name))
         print("Health: ", (Enemies.health))
         print("Qi: ", (Enemies.qi))
@@ -164,15 +154,15 @@ class Enemy():
 
     def Enemy_defeat(self):
         print("You managed to kill your enemy and succeed in the test ensuring your survival.")
-        time.sleep(4)
+        #time.sleep(4)
         print("As you return to the stands, proud about your victory, you sit down and fall asleep as you relax and are glad that you get to live another day.")
-        time.sleep(5)
+        #time.sleep(5)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print(" ")
-        time.sleep(1)
+        #time.sleep(1)
         print("Good Job, Game Done.")
         sys.exit()
 
@@ -279,7 +269,7 @@ def Battle():
     print(" ")
     print(" ")
     print("Enemy Stats:")
-    Enemies.Enemy_stats()
+    Enemy.Enemy_stats()
     while Main.health != 0:
         print("What would you like to do?")
         action = input()
@@ -439,7 +429,7 @@ def Body_Tempering_Arts(weapon_path_selection):
         print("Are you really going to choose this technique? Like out of all of these techniques, are you going to choose this one?")
         body_confirmation = input()
         if body_confirmation[0] == "y":
-            print("You've chosen: Yoga Exercises for Eighty Year Olds to Strengthen Joints and Hip Mobility")
+            print("You've chosen: Yoga Exercises for Eighty Year Olds to Strengthen Joints and Hip Mobility, an extremely advanced body tempering art")
             Main.body_tempering_arts.append("Yoga Exercises for Eighty Year Olds to Strengthen Joints and Hip Mobility")
             First_Weapon(weapon_path_selection)
         if body_confirmation[0] == "n":
@@ -450,7 +440,18 @@ def Body_Tempering_Arts(weapon_path_selection):
             print("5)Undying Warrior Body Technique")
             body_tempering_art_choice = input()
             Main.body_tempering_arts.append(body_tempering_art_choice)
+            if "Diamond Body Technique" in Main.martial_arts:
+                print("You've chosen an intermediate body tempering art")
+            if "One Mind One Body Technique" in Main.martial_arts:
+                print("You've chosen a beginner body tempering art")
+            if "5 Elements Perfection Body Technique" in Main.martial_arts:
+                print("You've chosen a beginner body tempering art")
+            if "Supreme Domineering Body Technique" in Main.martial_arts:
+                print("You've chosen an advanced body tempering art")
+            if "Undying Warrior Body Technique" in Main.martial_arts:
+                print("You've chosen an intermediate body tempering art")
             First_Weapon(weapon_path_selection)
+            
     else:
         Main.body_tempering_arts.append(body_tempering_art_choice)
         First_Weapon(weapon_path_selection)
@@ -465,6 +466,12 @@ def Breathing_Arts(weapon_path_selection):
         print("3)One Mind Sword Breathing Technique")
         breathing_technique_choice = input()
         Main.breathing_arts.append(breathing_technique_choice)
+        if "River of Swords Breathing Technique" in Main.martial_arts:
+            print("You've chosen an advanced breathing art")
+        if "10,000 Sword Breathing Technique" in Main.martial_arts:
+            print("You've chosen an intermediate breathing art")
+        if "One Mind Sword Breathing Technique" in Main.martial_arts:
+            print("You've chosen a beginner breathing art")
     if weapon_path_selection.lower() == "bow":
         print("He instructed you to go the bow section to find internal breathing arts related to bows to assist you in your cultivation")
         print("1)Unending Arrow Breathing Technique")
@@ -472,6 +479,12 @@ def Breathing_Arts(weapon_path_selection):
         print("3)All Seeing Arrow Breathing Technique")
         breathing_technique_choice = input()
         Main.breathing_arts.append(breathing_technique_choice)
+        if "Unending Arrow Breathing Technique" in Main.martial_arts:
+            print("You've chosen a beginner breathing art")
+        if "Immortal Hunters Breathing Technique" in Main.martial_arts:
+            print("You've chosen an advanced breathing art")
+        if "All Seeing Arrow Breathing Technique" in Main.martial_arts:
+            print("You've chosen an intermediate breathing art")
     if weapon_path_selection.lower() == "axe":
         print("He instructed you to go the axe section to find internal breathing arts related to axes to assist you in your cultivation")
         print("1)Living Forests Breath Breathing Technique")
@@ -479,13 +492,25 @@ def Breathing_Arts(weapon_path_selection):
         print("3)Howls of the Dying World Breathing Technique")
         breathing_technique_choice = input()
         Main.breathing_arts.append(breathing_technique_choice)
+        if "Living Forests Breath Breathing Technique" in Main.martial_arts:
+            print("You've chosen a beginner breathing art")
+        if "Wooden Cycle Breathing Technique" in Main.martial_arts:
+            print("You've chosen an intermediate breathing art")
+        if "Howls of the Dying World Breathing Technique" in Main.martial_arts:
+            print("You've chosen an advanced breathing art")
     if weapon_path_selection.lower() == "spear":
         print("He instructed you to go the spear section to find internal breathing arts related to spears to assist you in your cultivation")
         print("1)Undying Soldiers Breathing Technique")
-        print("2)Point of Origin Breathing Technique")
+        print("2)Point of Piercing Breathing Technique")
         print("3)Vital Rush Breathing Technique")
         breathing_technique_choice = input()
         Main.breathing_arts.append(breathing_technique_choice)
+        if "Undying Soldiers Breathing Technique" in Main.martial_arts:
+            print("You've chosen an intermediate breathing art")
+        if "Point of Piercing Breathing Technique" in Main.martial_arts:
+            print("You've chosen an advanced breathing art")
+        if "Vital Rush Breathing Technique" in Main.martial_arts:
+            print("You've chosen a beginner breathing art")
     if weapon_path_selection.lower() == "fist":
         print("He instructed you to go the fist section to find internal breathing arts related to fists to assist you in your cultivation")
         print("1)Unmoving Reaction Breathing Technique")
@@ -493,13 +518,25 @@ def Breathing_Arts(weapon_path_selection):
         print("3)Focused Mind Breathing Technique")
         breathing_technique_choice = input()
         Main.breathing_arts.append(breathing_technique_choice)
+        if "Unmoving Reaction Breathing Technique" in Main.martial_arts:
+            print("You've chosen an intermediate breathing art")
+        if "Untempted Soul Breathing Technique" in Main.martial_arts:
+            print("You've chosen an advanced breathing art")
+        if "Focused Mind Breathing Technique" in Main.martial_arts:
+            print("You've chosen a beginner breathing art")
     if weapon_path_selection.lower() == "staff":
         print("He instructed you to go the staff section to find internal breathing arts related to staffs to assist you in your cultivation")
         print("1)Natural Monkey's Breathing Technique")
-        print("2)Influx Breathing Technique")
+        print("2)Vortex Breathing Technique")
         print("3)Divine Cycle Breathing Technique")
         breathing_technique_choice = input()
         Main.breathing_arts.append(breathing_technique_choice)
+        if "Natural Monkey's Breathing Technique" in Main.martial_arts:
+            print("You've chosen a beginner breathing art")
+        if "Vortex Breathing Technique" in Main.martial_arts:
+            print("You've chosen an intermediate breathing art")
+        if "Divine Cycle Breathing Technique" in Main.martial_arts:
+            print("You've chosen an advanced breathing art")
     os.system('clear')
     Body_Tempering_Arts(weapon_path_selection)
     
@@ -512,34 +549,70 @@ def Martial_Art(weapon_path_selection):
         print("3)Universal Severance Technique")
         martial_arts_choice = input()
         Main.martial_arts.append(martial_arts_choice)
+        if "Death Touch Art" in Main.martial_arts:
+            print("You've chosen an intermediate martial art")
+        if "Slashing Sword Art" in Main.martial_arts:
+            print("You've chosen a beginner martial art")
+        if "Universal Severance Technique" in Main.martial_arts:
+            print("You've chosen an advanced martial art")
     if weapon_path_selection.lower() == "bow":
         print("1)Heavenly Target Technique")
         print("2)Wind Guidance Art")
         print("3)Piercing Arrow Art")
+        if "Heavenly Target Technique" in Main.martial_arts:
+            print("You've chosen an advanced martial art")
+        if "Wind Guidance Art" in Main.martial_arts:
+            print("You've chosen an intermediate martial art")
+        if "Piercing Arrow Art" in Main.martial_arts:
+            print("You've chosen a beginner martial art")
     if weapon_path_selection.lower() == "axe":
         print("1)World Splitting Axe Art")
         print("2)Cleaving Axe Art")
         print("3)Demonic Cleaving Axe Technique")
         martial_arts_choice = input()
         Main.martial_arts.append(martial_arts_choice)
+        if "World Splitting Axe Art" in Main.martial_arts:
+            print("You've chosen an advanced martial art")
+        if "Cleaving Axe Art" in Main.martial_arts:
+            print("You've chosen a beginner martial art")
+        if "Demonic Cleaving Axe Technique" in Main.martial_arts:
+            print("You've chosen an intermediate martial art")
     if weapon_path_selection.lower() == "spear":
         print("1)Stabbing Spear Art")
         print("2)Piercing Dragons Flow Art")
         print("3)Sky Penetrating Art")
         martial_arts_choice = input()
         Main.martial_arts.append(martial_arts_choice)
+        if "Stabbing Spear Art" in Main.martial_arts:
+            print("You've chosen a beginner martial art")
+        if "Piercing Dragons Flow Art" in Main.martial_arts:
+            print("You've chosen an intermediate martial art")
+        if "Sky Penetrating Art" in Main.martial_arts:
+            print("You've chosen an advanced martial art")
     if weapon_path_selection.lower() == "fist":
         print("1)Drunken Buddha's Fist Art")
         print("2)Asuras Bloody Claw Art")
         print("3)Punching Fist Art")
         martial_arts_choice = input()
         Main.martial_arts.append(martial_arts_choice)
+        if "Drunken Buddha's Fist Art" in Main.martial_arts:
+            print("You've chosen an intermediate martial art")
+        if "Asuras Bloody Claw Art" in Main.martial_arts:
+            print("You've chosen an advanced martial art")
+        if "Punching Fist Art" in Main.martial_arts:
+            print("You've chosen a beginner martial art")
     if weapon_path_selection.lower() == "staff":
         print("1)Swinging Staff Art")
         print("2)Dharma Wheel Turning Staff Art")
         print("3)Monkey Gods Divine Staff Art")
         martial_arts_choice = input()
         Main.martial_arts.append(martial_arts_choice)
+        if "Swinging Staff Art" in Main.martial_arts:
+            print("You've chosen a beginner martial art")
+        if "Dharma Wheel Turning Staff Art" in Main.martial_arts:
+            print("You've chosen an intermediate martial art")
+        if "Monkey Gods Divine Staff Art" in Main.martial_arts:
+            print("You've chosen an advanced martial art")
     os.system('clear')
     Breathing_Arts(weapon_path_selection)
 

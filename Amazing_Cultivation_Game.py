@@ -147,7 +147,7 @@ class Enemy():
             self.martial_arts = random.choice(martial_arts_list)
             self.breathing_arts = random.choice(breathing_arts_list)
 
-    def Enemy_stats(self):
+    def Enemy_stats():
         print("Name: ", (Enemies.name))
         print("Health: ", (Enemies.health))
         print("Qi: ", (Enemies.qi))
@@ -324,7 +324,6 @@ def Action_Relax():
     dance_time = str(dance_time)
     dance_counter = str(dance_counter)
     print("After you danced for " +dance_counter+ " hour(s) and relaxed, you hear a knock at your door.")
-    time.sleep(7)
     Battle_Initiation()
     
 def Training(training_action):

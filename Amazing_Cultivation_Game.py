@@ -155,7 +155,7 @@ class Enemy():
         print("You managed to kill your enemy and succeed in the test ensuring your survival.")
         time.sleep(4)
         print("As you return to the stands, proud about your victory, you sit down and fall asleep as you relax and are glad that you get to live another day.")
-        time.sleep(10)
+        time.sleep(5)
         print(" ")
         time.sleep(1)
         print(" ")

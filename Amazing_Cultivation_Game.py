@@ -19,8 +19,6 @@ class MainCharacter():
         self.skills = []
         self.martial_arts = []
         self.weapons = []
-        self.wins = None
-        self.loses = None
     
     def stats(self):
         print("Name: ", (Main.name))
@@ -105,10 +103,13 @@ class Enemy():
         self.dexterity = random.randint(1,20)
         self.endurance = random.randint(1,20)
         self.intelligence = random.randint(1,20)
+        self.traits = random.choice(traits_list)
+        self.martial_arts = []
+
         names = ["Fan Xiaobo","Zeng Liqiu","Qin Tung-Mei","He Liang","Chen Yanmei","Tian Nianzu","Dai Tao","Xu Meng","Liang Guoliang","Sun Zhilan","Ma Huifang","Zeng Chen","Zhu Meihui","Duan Yanmei","Gong Guangli","Luó Jiaying","Meng Xiaosheng","Zhong Qiuyue","Xiong Jia","Hao Xiuying"]
         weapons_list = ["standard practice sword","standard practice bow","standard practice axe","standard practice spear","standard practice gauntlets","standard practice staff"] 
-        self.wins = None
-        self.loses = None
+        traits_list = ["Agile","Ambitious","Arrogant","Artful","Awful","Ascetic","Beautiful","Brave","Bright","Brilliant","Careless","Cautious","Charismatic","Charitable","Cheerful","Clever","Clumsy","Committed","Competitive","Composed","Concerned","Co-ordinated","Cordial","Cowardly","Creative","Cruel","Cunning","Deceitful","Defiant","Determined","Direct","Disciplinarian","Disloyal","Distinguished","Dutiful","Elusive","Energetic","Enigmatic","Feared","Fiery","Formidable","Fraternal","Friendly","Frivolous","Fulfilled","Graceful","Gracious","Greedy","Handsome","Healed","Healthy","Honest","Honourable","Humble","Impeccable","Incompetent","Indecisive","Intimidating","Intrepid","Kind","Kind-hearted","Lame","Loyal","Lumbering","Maimed","Modest","Obstinate","One-Eyed","Pacifist","Patient","Perceptive","Philanthropic","Populist","Quiet","Reckless","Relentless","Resourceful","Scarred","Scholary","Selfless","Sickly","Sincere","Solitary","Spiteful","Stalwart","Stern","Strong","Stubborn","Superstitious","Suspicious","Temperamental","Tolerant","Tough","Tranquil","Trusting","Trustworthy","Uncomplicated","Understanding","Unobservant","Vain","Vengeful","Vigilant","Weak"]
+        martial_arts_list = []
 
     def Enemy_stats(self):
         print("Name: ", (Enemies.name))

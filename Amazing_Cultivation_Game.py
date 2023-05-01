@@ -91,7 +91,7 @@ class MainCharacter():
         print(" ")
         time.sleep(1)
         print(" ")
-        #time.sleep(1)
+        time.sleep(1)
         print(" ")
         time.sleep(1)
         print("Loser")
@@ -458,7 +458,7 @@ def Body_Tempering_Arts(weapon_path_selection):
 
 def Breathing_Arts(weapon_path_selection):
     print("As you go up to the instructor near the martial arts section of the library, he tells you that you can now move on to the right section of the library where the interal breathing techniques are which will allow you to cultivate your body spiritually and further strenghten your techniques.")
-    #time.sleep(18)
+    time.sleep(18)
     if weapon_path_selection.lower() == "sword":
         print("He instructed you to go the sword section to find internal breathing arts related to swords to assist you in your cultivation")
         print("1)River of Swords Breathing Technique")

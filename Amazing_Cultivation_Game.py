@@ -2,6 +2,8 @@ import sys
 import time
 import os
 import random
+#Information about "os": https://www.geeksforgeeks.org/os-module-python-examples/
+#Information about "random": https://www.w3schools.com/python/module_random.asp
 
 class MainCharacter():
     def __init__(self):

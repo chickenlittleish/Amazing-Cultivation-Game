@@ -119,33 +119,23 @@ class Enemy():
         if self.main_weapon == "standard practice sword":
             martial_arts_list = ["Death Touch Art","Slashing Sword Art","Universal Severance Technique"]
             breathing_arts_list = ["River of Swords Breathing Technique","10,000 Sword Breathing Technique","One Mind Sword Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice bow":
             martial_arts_list = ["Heavenly Target Technique","Wind Guidance Art","Piercing Arrow Art"]
             breathing_arts_list = ["Unending Arrow Breathing Technique","Immortal Hunters Breathing Technique","All Seeing Arrow Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice axe":
             martial_arts_list = ["World Splitting Axe Art","Cleaving Axe Art","Demonic Cleaving Axe Technique"]
             breathing_arts_list = ["Living Forests Breath Breathing Technique","Wooden Cycle Breathing Technique","Howls of the Dying World Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice spear":
             martial_arts_list = ["Stabbing Spear Art","Piercing Dragons Flow Art","Sky Penetrating Art"]
             breathing_arts_list = ["Undying Soldiers Breathing Technique",")Point of Origin Breathing Technique","Vital Rush Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "fist":
             martial_arts_list = ["Drunken Buddha's Fist Art","Asuras Bloody Claw Art","Punching Fist Art"]
             breathing_arts_list = ["Unmoving Reaction Breathing Technique","Untempted Soul Breathing Technique","Focused Mind Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "staff":
             martial_arts_list = ["Swinging Staff Art","Dharma Wheel Turning Staff Art","Monkey Gods Divine Staff Art"]
             breathing_arts_list = ["Natural Monkey's Breathing Technique","Influx Breathing Technique","Divine Cycle Breathing Technique"]
-            self.martial_arts = random.choice(martial_arts_list)
-            self.breathing_arts = random.choice(breathing_arts_list)
+        self.martial_arts = random.choice(martial_arts_list)
+        self.breathing_arts = random.choice(breathing_arts_list)
 
     def Enemy_stats():
         print("Name: ", (Enemies.name))
@@ -278,7 +268,7 @@ def Battle():
     print(" ")
     print(" ")
     print("Enemy Stats:")
-    Enemies.Enemy_stats()
+    Enemy.Enemy_stats()
     while Main.health != 0:
         print("What would you like to do?")
         action = input()

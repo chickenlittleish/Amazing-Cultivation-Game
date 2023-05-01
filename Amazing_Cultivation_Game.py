@@ -97,6 +97,7 @@ class MainCharacter():
         print("Loser")
         print("Lol")
         print("Get Gud")
+        sys.exit()
 
 class Enemy():
     def __init__(self):
@@ -119,25 +120,35 @@ class Enemy():
         if self.main_weapon == "standard practice sword":
             martial_arts_list = ["Death Touch Art","Slashing Sword Art","Universal Severance Technique"]
             breathing_arts_list = ["River of Swords Breathing Technique","10,000 Sword Breathing Technique","One Mind Sword Breathing Technique"]
+            self.martial_arts = random.choice(martial_arts_list)
+            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice bow":
             martial_arts_list = ["Heavenly Target Technique","Wind Guidance Art","Piercing Arrow Art"]
             breathing_arts_list = ["Unending Arrow Breathing Technique","Immortal Hunters Breathing Technique","All Seeing Arrow Breathing Technique"]
+            self.martial_arts = random.choice(martial_arts_list)
+            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice axe":
             martial_arts_list = ["World Splitting Axe Art","Cleaving Axe Art","Demonic Cleaving Axe Technique"]
             breathing_arts_list = ["Living Forests Breath Breathing Technique","Wooden Cycle Breathing Technique","Howls of the Dying World Breathing Technique"]
+            self.martial_arts = random.choice(martial_arts_list)
+            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "standard practice spear":
             martial_arts_list = ["Stabbing Spear Art","Piercing Dragons Flow Art","Sky Penetrating Art"]
             breathing_arts_list = ["Undying Soldiers Breathing Technique",")Point of Origin Breathing Technique","Vital Rush Breathing Technique"]
+            self.martial_arts = random.choice(martial_arts_list)
+            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "fist":
             martial_arts_list = ["Drunken Buddha's Fist Art","Asuras Bloody Claw Art","Punching Fist Art"]
             breathing_arts_list = ["Unmoving Reaction Breathing Technique","Untempted Soul Breathing Technique","Focused Mind Breathing Technique"]
+            self.martial_arts = random.choice(martial_arts_list)
+            self.breathing_arts = random.choice(breathing_arts_list)
         if self.main_weapon == "staff":
             martial_arts_list = ["Swinging Staff Art","Dharma Wheel Turning Staff Art","Monkey Gods Divine Staff Art"]
             breathing_arts_list = ["Natural Monkey's Breathing Technique","Influx Breathing Technique","Divine Cycle Breathing Technique"]
-        self.martial_arts = random.choice(martial_arts_list)
-        self.breathing_arts = random.choice(breathing_arts_list)
+            self.martial_arts = random.choice(martial_arts_list)
+            self.breathing_arts = random.choice(breathing_arts_list)
 
-    def Enemy_stats():
+    def Enemy_stats(Enemies):
         print("Name: ", (Enemies.name))
         print("Health: ", (Enemies.health))
         print("Qi: ", (Enemies.qi))
@@ -258,7 +269,7 @@ def Battle():
     #time.sleep(12)
     print("'Your first test shall be a dueling competition between you all as you may have noticed that there are stil too many of you guys. We don't need all of you guys, we only need the very best of you so to cut down your numbers in half, you all shall fight to the death with the winner being allowed to remain.'")
     #time.sleep(20)
-    print("'The first two contestants are " +Main.name+ " and " +Enemies.name+ ", please come up to the stage'")
+    print("'The first two contestants are " +str(Main.name)+ " and " +str(Enemies.name)+ ", please come up to the stage'")
     #time.sleep(5)
     print("As you get to the stage, you see your opponent")
     os.system('clear')
@@ -268,18 +279,18 @@ def Battle():
     print(" ")
     print(" ")
     print("Enemy Stats:")
-    Enemy.Enemy_stats()
+    Enemies.Enemy_stats()
     while Main.health != 0:
         print("What would you like to do?")
         action = input()
         if action.lower() == "attack":
             print("You dealt " +str(Main.strength)+ " damage to your enemy")
-            Enemies.health = Enemies.health - Main.strength
+            Enemies.health = Enemies.health - int(Main.strength)
             if Enemies.health <= 0:
                 Enemies.Enemy_defeat()
         print("Now it's your opponents turn to attack.")
         print("Your opponent dealt " +str(Enemies.strength)+ " damage to you.")
-        Main.health = Main.health - Enemies.strength
+        Main.health = Main.health - int(Enemies.strength)
         if Main.health <= 0:
             Main.Death()
         

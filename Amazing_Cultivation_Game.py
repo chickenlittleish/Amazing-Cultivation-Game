@@ -35,6 +35,7 @@ class MainCharacter():
         print("Endurance:",(Main.endurance))
         print("Intelligence: ",(Main.intelligence))
         print("Main Weapon: ",(Main.main_weapon))
+        print("Weapons: ", (Main.weapons))
         if Main.martial_arts != []:
             print("Martial Arts: ",(Main.martial_arts))
         if Main.breathing_arts != []:
@@ -135,6 +136,7 @@ class Enemy():
         if self.main_weapon == "staff":
             martial_arts_list = ["Swinging Staff Art","Dharma Wheel Turning Staff Art","Monkey Gods Divine Staff Art"]
             breathing_arts_list = ["Natural Monkey's Breathing Technique","Vortex Breathing Technique","Divine Cycle Breathing Technique"]
+        martial_arts_list = martial_arts_list
         self.martial_arts = random.choice(martial_arts_list)
         self.breathing_arts = random.choice(breathing_arts_list)
 
@@ -289,33 +291,6 @@ def Battle_Initiation():
     time.sleep(6)
     print("He led you through the whole facility to a giant arena where you see the facility leader standing on the stage")
     Battle()
-
-def Action_Sleep():
-    print("you decided to go to bed due to your exhaustion from the long day")
-    time.sleep(20)
-    print("A knocking sound woke you up from your slumber.")
-    time.sleep(3)
-    Battle_Initiation()
-
-def Action_Relax():      
-    print("You decided to relax and enjoy your time by dancing.")
-    time.sleep(4)
-    print("What dance do you want to do?")
-    dance_choice = input()
-    print("How many hours do you want to dance for?")
-    dance_time = input()
-    dance_time = int(dance_time)
-    time.sleep(2)
-    dance_counter = 1
-    for dance_counter in range(dance_counter, dance_time + 1):
-        dance_counter = str(dance_counter)
-        print("You danced the " +dance_choice+ " for " +dance_counter+ " hour(s)")
-        dance_counter = int(dance_counter)
-        time.sleep(1)
-    dance_time = str(dance_time)
-    dance_counter = str(dance_counter)
-    print("After you danced for " +dance_counter+ " hour(s) and relaxed, you hear a knock at your door.")
-    Battle_Initiation()
     
 def Training(training_action):
     if training_action in ["1","Train Martial Arts"]:
@@ -328,14 +303,14 @@ def Training(training_action):
     if training_action in ["2","Exercise"]:
         print("Which exercise would you like to do?")
         exercise = input()
-        print("How many " +exercise+ " would you like to do")
+        print("How many " +exercise+ "s would you like to do")
         amount = input()
         amount = int(amount)
         time.sleep(2)
         amount_time = 1
         for amount_time in range(amount_time, amount + 1):
             amount_time = str(amount_time)
-            print("[You bit the key " +amount_time+ " times]")
+            print("[You did " +amount_time + exercise + "(s)")
             amount_time = int(amount_time)
             time.sleep(1)
         amount = str(amount)
@@ -351,9 +326,37 @@ def Action_Train():
 
 def Action_1(action1):
     if action1.lower() == "sleep":
-        Action_Sleep()
+        print("you decided to go to bed due to your exhaustion from the long day")
+        time.sleep(20)
+        print("A knocking sound woke you up from your slumber.")
+        time.sleep(3)
+        Battle_Initiation()
     if action1.lower() == "relax":
-        Action_Relax()
+        print("You decided to relax and enjoy your time by dancing.")
+        time.sleep(4)
+        print("What dance do you want to do?")
+        dance_choice = input()
+        print("How many hours do you want to dance for?")
+        dance_time = input()
+        dance_time = int(dance_time)
+        time.sleep(2)
+        dance_counter = 1
+        for dance_counter in range(dance_counter, dance_time + 1):
+            dance_counter = str(dance_counter)
+            print("You danced the " +dance_choice+ " for " +dance_counter+ " hour(s)")
+            dance_counter = int(dance_counter)
+            time.sleep(1)
+        dance_time = str(dance_time)
+        dance_counter = str(dance_counter)
+        print("After you danced for " +dance_counter+ " hour(s), you suddenly saw a bright light appear in front of you and a message was displayed")
+        time.sleep(9)
+        print("The message stated how the gods were so impressed by your dancing skills and your determination to dancing that they provided you with a gift.")
+        time.sleep(10)
+        print("You got the 'Divine God Dragon Emperor Kings Immortal Destroying Sacred Demonic Dance " +str(Main.main_weapon)+ "'")
+        Main.weapons.append("Divine God Dragon Emperor Kings Immortal Destroying Sacred Demonic Dance " +str(Main.main_weapon))
+        time.sleep(5)
+        print("After the bright light disappeared and you gained the weapon, you hear a knock at your door.")
+        Battle_Initiation()
     if action1.lower() == "train":
         Action_Train()
 
@@ -402,7 +405,7 @@ def First_Weapon(weapon_path_selection):
         Main.weapons.append("standard practice staff")
         Main.main_weapon = "staff"
     print("'Now that you got your weapon, continue down the hall and you should find the dorms for you trainees to stay at, just find the one with your name on it and head inside.'")
-    #time.sleep(10)
+    time.sleep(10)
     os.system('clear')
     print("As you reached the dorms you searched through them until you found the one with your name on it.")
     print("Number 31:")
